@@ -1,8 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic);
+
 IMG.banner {
-	
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 100%;
-margin-top: 50px;	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	margin-top: 50px;	
+}
+
+body {
+	font-family: 'Josefin Slab', serif;
+	text-color: #5e0087;
 }
