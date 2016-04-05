@@ -1,5 +1,7 @@
-.center {
+IMG.banner {
 	
-text-align: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
 	
 }
