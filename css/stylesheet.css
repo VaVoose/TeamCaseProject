@@ -1,14 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic);
 
+img.socialMedia {
+	height: 35px;
+	width: 30px;
+	padding-top: 10px;
+	margin-right: 35px;
+	
+}
+
 IMG.banner {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
-	margin-top: 50px;	
+	margin-top: 61px;	
 }
 
 body {
 	font-family: 'Josefin Slab', serif;
 	text-color: #5e0087;
+	font-size: 20px;
+}
+
+div.container {
+	padding-top:10px;
 }
