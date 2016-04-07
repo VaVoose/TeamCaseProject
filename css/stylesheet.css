@@ -23,5 +23,12 @@ body {
 }
 
 div.container {
-	padding-top:10px;
+	padding-top:30px;
+}
+
+img.nonspecific {
+	height: 300px;
+	width: 300px;
+	padding-bottom: 50px;
+	
 }
