@@ -1,11 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic);
 
 img.socialMedia {
-	height: 35px;
-	width: 30px;
+	height: 50px;
+	width: 50px;
 	padding-top: 10px;
-	margin-right: 35px;
-	
+	margin-right: 10px;
 }
 
 IMG.banner {
