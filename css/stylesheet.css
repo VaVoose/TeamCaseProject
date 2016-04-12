@@ -16,6 +16,16 @@ IMG.banner {
 	margin-top: 82px;	
 }
 
+img.UpOutYou {
+	height: 350px;
+	width: 350px;
+	padding-bottom: 20px;
+}
+
+div.missionstatement {
+	padding-bottom: 20px;
+}
+
 body {
 	font-family: 'Josefin Slab', serif;
 	text-color: #5e0087;
