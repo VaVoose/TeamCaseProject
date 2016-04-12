@@ -31,3 +31,11 @@ img.nonspecific {
 	width: 300px;
 	padding-bottom: 50px;
 }
+
+.jumbotron{
+	padding: 200px;
+	background-color: #47b8a1;
+	color: #F3F3F3;
+	font-size: 80px;
+	text-align: center;
+}
