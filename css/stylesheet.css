@@ -28,7 +28,7 @@ div.missionstatement {
 
 body {
 	font-family: 'Josefin Slab', serif;
-	text-color: #5e0087;
+	text-color: #000000;
 	font-size: 20px;
 }
 
@@ -44,7 +44,7 @@ img.nonspecific {
 
 .jumbotron{
 	padding: 200px;
-	background-color: #334d5c;
+	background-color: #004A8D;
 	color: #F3F3F3;
 	font-size: 80px;
 	text-align: center;
