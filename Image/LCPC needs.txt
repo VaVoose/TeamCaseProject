@@ -15,7 +15,7 @@ Do we need to desing the new logo?
 -presybiterian definition
 -homestead server renting
 -google calender 
--live twitter feed
+
 -notes and documentation
 -map with address
 
