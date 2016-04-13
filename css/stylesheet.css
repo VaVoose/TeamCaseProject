@@ -47,8 +47,9 @@ img.nonspecific {
 	padding-bottom: 200px;
 	padding-left: 2%;
 	padding-right: 2%;
-	background-color: #004A8D;
+	background-color: #000000;
 	color: #F3F3F3;
 	font-size: 80px;
 	text-align: center;
+	/* #004A8D */
 }
