@@ -49,6 +49,10 @@ img.nonspecific {
 	text-align: center;
 }
 
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
 .jumbotron{
 	padding-top: 200px;
 	padding-bottom: 200px;
@@ -58,5 +62,4 @@ img.nonspecific {
 	color: #F3F3F3;
 	font-size: 80px;
 	text-align: center;
-	/* #004A8D */
 }
