@@ -53,12 +53,19 @@ img.nonspecific {
 	display: block;
 }
 
+
+ .carousel-inner > .item > img,
+ .carousel-inner > .item > a > img {
+      width: 30%;
+      margin: auto;
+  }
+
 .jumbotron{
 	padding-top: 200px;
 	padding-bottom: 200px;
 	padding-left: 2%;
 	padding-right: 2%;
-	background-color: #004A8D;
+	background-color: #41B49D;
 	color: #F3F3F3;
 	font-size: 80px;
 	text-align: center;
