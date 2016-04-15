@@ -53,6 +53,13 @@ img.nonspecific {
 	display: block;
 }
 
+
+ .carousel-inner > .item > img,
+ .carousel-inner > .item > a > img {
+      width: 30%;
+      margin: auto;
+  }
+
 .jumbotron{
 	padding-top: 200px;
 	padding-bottom: 200px;
