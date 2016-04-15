@@ -8,6 +8,13 @@ img.socialMedia {
 	margin-right: 10px;
 }
 
+img.specificPage {
+	width: 100%;
+	margin: auto;
+	padding-bottom: 20px;
+	
+}
+
 IMG.banner {
 	display: block;
 	margin-left: auto;
