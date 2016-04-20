@@ -15,10 +15,6 @@ img.specificPage {
 	
 }
 
-img.carrol {
-	height: 300px;
-}
-
 IMG.banner {
 	display: block;
 	margin-left: auto;
@@ -73,15 +69,12 @@ img.nonspecific {
   }
 
 .jumbotron{
-	padding-top: 190px;
-	padding-bottom: 110px;
+	padding-top: 200px;
+	padding-bottom: 200px;
 	padding-left: 2%;
 	padding-right: 2%;
 	background-color: #41B49D;
 	color: #F3F3F3;
 	font-size: 80px;
 	text-align: center;
-}
-.bottom {
-    border-bottom: 1px solid #ccc;
 }
