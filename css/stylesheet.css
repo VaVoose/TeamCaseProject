@@ -37,6 +37,14 @@ div.missionstatement {
 	padding-bottom: 20px;
 }
 
+div.calendarholder {
+	margin: auto;
+}
+
+div.heading {
+	text-align: center;
+}
+
 body {
 	font-family: 'Josefin Slab', serif;
 	text-color: #000000;
