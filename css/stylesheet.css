@@ -62,7 +62,7 @@ img.nonspecific {
 }
 
 h1 {
-	color: #ff9933;
+	color: #ff9400;
 }
 
 h1.center {
@@ -71,7 +71,7 @@ h1.center {
 
 .footer{
 	padding-top: 60px;
-	background-color: #f8f8f8;
+	background-color: #FFFFCC;
 	padding-bottom: 5px;
 	text-align: center;
 }
@@ -89,7 +89,11 @@ h1.center {
   }
   
 strong {
-	color: #ff9933;
+	color: #ff9400;
+}
+
+nav.navbar {
+	background-color: #FFFFCC;
 }
 
 .jumbotron{
@@ -97,12 +101,12 @@ strong {
 	padding-bottom: 110px;
 	padding-left: 2%;
 	padding-right: 2%;
-	background-color: #0ee1af;
+	background-color: #0077DA;
 	color: #F3F3F3;
 	font-size: 80px;
 	text-align: center;
 }
 .bottom {
-    border-bottom: 1px solid #ff9933;
+    border-bottom: 1px solid #ff9400;
 	
 }
