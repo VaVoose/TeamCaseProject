@@ -61,6 +61,14 @@ img.nonspecific {
 	padding-bottom: 50px;
 }
 
+h1 {
+	color: #ff9933;
+}
+
+h1.center {
+	text-align: center;
+}
+
 .footer{
 	padding-top: 60px;
 	background-color: #f8f8f8;
@@ -79,6 +87,10 @@ img.nonspecific {
 	  height: 300px;
       margin: auto;
   }
+  
+strong {
+	color: #ff9933;
+}
 
 .jumbotron{
 	padding-top: 190px;
@@ -91,5 +103,6 @@ img.nonspecific {
 	text-align: center;
 }
 .bottom {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ff9933;
+	
 }
