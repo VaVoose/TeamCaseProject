@@ -80,7 +80,6 @@ h1.center {
 	display: block;
 }
 
-
  .carousel-inner > .item > img,
  .carousel-inner > .item > a > img {
       width: 30%;
@@ -90,6 +89,10 @@ h1.center {
   
 strong {
 	color: #ff9400;
+}
+
+li.active {
+	background-color: #FF9400;
 }
 
 nav.navbar {
