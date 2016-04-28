@@ -47,7 +47,7 @@ div.heading {
 }
 
 body {
-	font-family: 'Josefin Slab', serif;
+	font-family: 'Josefin Slab', 'Heron Sans', serif;
 	text-color: #000000;
 	font-size: 20px;
 }
