@@ -1,5 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic);
 
+a {
+	color: #339933;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+	color: #ffc2ba;
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
 img.socialMedia {
 	height: 50px;
 	width: 50px;
@@ -70,7 +90,7 @@ h1.center {
 	text-align: center;
 }
 
-.footer{
+.footer {
 	padding-top: 40px;
 	background-color: #66CC66;
 	padding-bottom: 5px;
