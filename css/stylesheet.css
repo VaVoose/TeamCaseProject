@@ -12,7 +12,6 @@ img.specificPage {
 	width: 100%;
 	margin: auto;
 	padding-bottom: 20px;
-	
 }
 
 img.carrol {
@@ -64,7 +63,7 @@ img.nonspecific {
 }
 
 h1 {
-	color: #ff9400;
+	color: #339933;
 }
 
 h1.center {
@@ -72,10 +71,11 @@ h1.center {
 }
 
 .footer{
-	padding-top: 60px;
-	background-color: #FFFFCC;
+	padding-top: 40px;
+	background-color: #66CC66;
 	padding-bottom: 5px;
 	text-align: center;
+	color: #f3f3f3;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -90,15 +90,27 @@ h1.center {
   }
   
 strong {
-	color: #ff9400;
-}
-
-li.active {
-	background-color: #FF9400;
+	color: #339933;
 }
 
 nav.navbar {
-	background-color: #FFFFCC;
+	background-color: #66CC66;
+	
+}
+
+.navbar-default {
+	border: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #f3f3f3;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active {
+	color: #F3F3F3 !important;
+	background-color: #339999 !important;
+	border-radius: 20px 20px 0px 0px;
+	
 }
 
 .jumbotron{
@@ -106,13 +118,13 @@ nav.navbar {
 	padding-bottom: 110px;
 	padding-left: 2%;
 	padding-right: 2%;
-	background-color: #0077DA;
+	background-color: #339999;
 	color: #F3F3F3;
 	font-size: 80px;
 	text-align: center;
 }
 .bottom {
-    border-bottom: 1px solid #ff9400;
+    border-bottom: 1px solid #339933;
 	
 }
 
@@ -196,3 +208,5 @@ border-radius: 10px;
   -o-transition:padding 0.5s linear;         
   transition:padding 0.5s linear;  
 }
+
+/* http://paletton.com/#uid=72U0u0kiux42mI78JGZqovZF7tJ */
