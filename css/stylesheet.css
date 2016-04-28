@@ -148,21 +148,21 @@ nav.navbar {
 }
 
 .fade-in.one {
--webkit-animation-delay: 0.7s;
--moz-animation-delay: 0.7s;
-animation-delay: 0.7s;
+-webkit-animation-delay: 0.5s;
+-moz-animation-delay: 0.5s;
+animation-delay: 0.5s;
 }
 
 .fade-in.two {
--webkit-animation-delay: 1.2s;
--moz-animation-delay:1.2s;
-animation-delay: 1.2s;
+-webkit-animation-delay: 1.0s;
+-moz-animation-delay:1.0s;
+animation-delay: 1.0s;
 }
 
 .fade-in.three {
--webkit-animation-delay: 1.6s;
--moz-animation-delay: 1.6s;
-animation-delay: 1.6s;
+-webkit-animation-delay: 1.4s;
+-moz-animation-delay: 1.4s;
+animation-delay: 1.4s;
 }
 
 /*---make a basic box ---*/
