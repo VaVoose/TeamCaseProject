@@ -31,6 +31,8 @@ img.UpOutYou {
 	height: 350px;
 	width: 350px;
 	padding-bottom: 20px;
+	margin: auto;
+	
 }
 
 div.missionstatement {
@@ -100,7 +102,7 @@ nav.navbar {
 }
 
 .jumbotron{
-	padding-top: 190px;
+	padding-top: 210px;
 	padding-bottom: 110px;
 	padding-left: 2%;
 	padding-right: 2%;
@@ -112,4 +114,85 @@ nav.navbar {
 .bottom {
     border-bottom: 1px solid #ff9400;
 	
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay:1.2s;
+animation-delay: 1.2s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay: 1.6s;
+animation-delay: 1.6s;
+}
+
+/*---make a basic box ---*/
+.box{
+width: 100px;
+height: 100px;
+position: relative;
+margin: 10px;
+color: white;
+padding: 40px;  
+float: left;
+border: 1px solid #fff;
+background: #27a5d2;
+border-radius: 10px;
+}
+
+.slideup, .slidedown {
+	max-height: 0;            
+	overflow-y: hidden;
+	-webkit-transition: max-height 0.5s ease-in-out;
+	-moz-transition: max-height 0.5s ease-in-out;
+	-o-transition: max-height 0.5s ease-in-out;
+	transition: max-height 0.5s ease-in-out;
+}
+.slidedown {            
+	max-height: 60px ;                    
+}
+
+.affix {
+  padding:0px;
+  -webkit-transition:padding 0.2s linear;
+  -moz-transition:padding 0.2s linear;  
+  -o-transition:padding 0.2s linear;         
+  transition:padding 0.2s linear;  
+
+}
+
+.affix-top {
+  padding-top:15px;
+  padding-bottom:0px;
+  -webkit-transition:padding 0.5s linear;
+  -moz-transition:padding 0.5s linear;  
+  -o-transition:padding 0.5s linear;         
+  transition:padding 0.5s linear;  
 }
