@@ -25,9 +25,24 @@ a:active {
 	.dropdown:hover .dropdown-menu {
 		display: block;
 	}
+	
+	div.socialmediasmall {
+		display: none;
+	}
 }
 
 @media (max-width: 1199px) {
+	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active {
+		border-radius: 20px 20px 20px 20px !important;
+	}
+	
+	
+}
+
+@media (max-width: 1199px) {
+	div.socialmediabig {
+		display: none;
+	}
     .navbar-header {
         float: none;
     }
