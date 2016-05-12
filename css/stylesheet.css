@@ -51,7 +51,15 @@ a:active {
 		border-radius: 20px 20px 20px 20px !important;
 	}
 	
-	
+	#jumbopic {
+		margin-left: -30px;
+	}
+}
+
+@media (max-width: 991px) {
+	#jumbopic {
+		margin-left: 0px !important;
+	}
 }
 
 @media (max-width: 1199px) {
@@ -209,7 +217,11 @@ h1.center {
 	color: #f3f3f3;
 }
 
-
+.carousel {
+        background: #66CC66;
+        position: relative;
+        padding: 10px;     /* Shows as a border around the carousel */
+    }
 
  .carousel-inner > .item > img,
  .carousel-inner > .item > a > img {
@@ -255,9 +267,17 @@ nav.navbar {
 	
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #FFFFFF !important;
+}
+
+.navbar-toggle {
+	margin-top: -2px;
+}
+
 .jumbotron{
-	padding-top: 210px;
-	padding-bottom: 110px;
+	padding-top: 165px;
+	padding-bottom: 80px;
 	padding-left: 2%;
 	padding-right: 2%;
 	
@@ -274,10 +294,28 @@ nav.navbar {
 	font-size: 80px;
 	text-align: center;
 }
+
+#jumbo {
+	font-size: 80px;
+	text-align: center;
+}
+
+#jumbopic {
+	height: 230px;
+	width: 200px;
+	margin-top: -25px;
+}
+
 .bottom {
     border-bottom: 1px solid #339933;
 	
 }
+
+
+
+
+/* Code for the picture animations */
+/*---------------------------------*/
 
 @-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
