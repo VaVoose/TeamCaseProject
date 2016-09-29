@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>var pgtitle = 'Signin'; //CHANGE THIS </script>
+<script language="javascript" src="../js/header.js?min=1"></script>
+<div id="main" class="container">
+<!-- Main Content Area -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="JavaScript" src="../js/cryptojs/sha256.js"></script>
+<script language="JavaScript" src="../js/cryptojs/aes.js"></script>
+
+<script>
+if(func=="out") {
+	localStorage.removeItem("key");
+	localStorage.removeItem("user");
+	document.write('<h1>You have signed out</h1>'); 
+} else {
+	var inuser = getUrlVars()["f2u"];
+	var inpass = getUrlVars()["f2p"];
+	var func = getUrlVars()["fc"];
+	var skip = 32;
+	var hash = CryptoJS.SHA256(CryptoJS.SHA256(inuser) + '::' + CryptoJS.SHA256(inpass));
+	}
+</script>
+<script language="JavaScript" src="../js/accounts.js"></script>
+<script>
+if(func=="out") {
+document.write('<h1>You have signed out</h1>'); 
+localStorage.removeItem("key");
+localStorage.removeItem("user");
+} else {
+//console.log('TotalSkip: ' + skip);
+if(skip>64) {
+	document.write('<h1>Welcome, ' + localStorage.getItem('user') + '</h1>'); 
+} else {
+	document.write('<h1>Incorrect username or password</h1>'); 
+}
+
+}
+
+</script>
+<!-- End Main Content Area -->
+</div>
+<script src="../js/footer.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>var pgtitle = 'Files'; </script>
+<script language="javascript" src="../js/header.js?min=1"></script>
+<script language="javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>var filelist = [];</script>
+<div id="main" class="container"><div style="padding-left:2em;">
+
+
+<script>
+	var renchk = getUrlVars()["ren"];
+	var file = getUrlVars()["k2"];
+	if(renchk=='t'){
+	document.write('<h1>New Name: </h1><br><p id="filesar"> ');
+	document.write('<form action="http://lcpc.exploit.ws/edit.php" method="GET">');
+	document.write('<input type="text" id="nname" name="nname"><br>');
+	document.write('<input type="hidden" id="del" name="del" value="' + file + '">');
+	document.write('<input type="hidden" id="refr" name="refr" value="file:///S:/Livshits/PWD Completed/ICP Project/TCP/admin/file.html">');
+	document.write('<input type="submit" value="Rename" name="submit"></form>');
+	
+	
+	} else {
+	document.write('<h1>Files: </h1><br><p id="filesar"> ');
+	var rand = '?xrt' + Math.floor(Math.random() * 100001);
+	var sorc = 'http://lcpc.exploit.ws/uploads/fileindex.conf.js' + rand;
+	
+	$.getScript(sorc)
+		.done(function( script, textStatus ) {
+		console.log( textStatus );
+		var index, len;
+		for (index = 0, len = filelist.length; index < len; ++index) {
+		console.log(filelist[index]);
+		var selec = document.getElementById("filesar");
+		var ent = "<a href=\"fileedit.html?ren=t&k2=" + index + "\">r</a> &nbsp; <a href=\"http://lcpc.exploit.ws/edit.php?del=" + index + "\">x</a> &nbsp;" + filelist[index]
+		selec.innerHTML = ent + selec.innerHTML;
+	}
+	});
+	}
+</script>
+
+<br>
+</p>
+</div></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src=bootstrap/docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="css/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="css/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

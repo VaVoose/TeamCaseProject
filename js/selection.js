@@ -1,0 +1,1 @@
+document.write('<font size="20"><center><a style="float: right;" href="rubycode.html"> Snek</a> &nbsp<a style= "margin-top: 100px;" "float: left;" href="rubycode2.html"> Freg</a> &nbsp<a href="pac.html"> Pukmen</a> &nbsp</center><font>');
