@@ -1,0 +1,18 @@
+
+
+<link rel="stylesheet" href="css/stylesheet.css">
+<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic' rel='stylesheet' type='text/css'>
+
+
+<script>
+function event(name, date, content) {
+	var rand = 'evid' + Math.floor(Math.random() * 100001);
+	var lines = ((30*(Math.round(content.length / 70)))+25);
+	document.write('<div class="eventbox collapse-group">');
+	document.write('<h1 class="inline church-blue">' + name + '</h1> <span class="h1-font inline church-blue italic small-font">&nbsp; - &nbsp;(' + date + ')</span><br>');
+	document.write('<p>' + content + '</p></div><br><br>');
+	
+}
+</script>
+
+<script src="http://lcpc.exploit.ws/new/eventlist.php"></script>
