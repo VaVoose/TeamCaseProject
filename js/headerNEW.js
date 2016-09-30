@@ -1,5 +1,4 @@
 var titlepre = 'LCPC'; //Website Title prefix
-
 var color = "#df5a49"; // This is the color of the header and footer
 var bgcolor = "#a1e8d9"; //This is the background color
 
@@ -286,12 +285,10 @@ document.write('    <link href="../css/bootstrap/dist/css/bootstrap.min.css" rel
 document.write('    <!-- Icons & Fonts -->');
 document.write('    <link href="http://fonts.googleapis.com/css?family=Dosis:400,500,700" rel="stylesheet" type="text/css"> ');
 //document.write('	<link rel="stylesheet" href="../css/fonts.css">');
-document.write('    <link rel="stylesheet" href="../css/styles.css">');
 document.write('    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->');
 document.write('    <link href="../css/bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">');
 document.write('    <!-- Custom styles for this template -->');
-document.write('    <link href="../css/main.css" rel="stylesheet">');
-document.write('    <link href="../css/header.css" rel="stylesheet">');
+document.write('    <link href="../css/stylesheet.css" rel="stylesheet">');
 document.write('    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->');
 document.write('    <!--[if lt IE 9]>');
 document.write('      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>');
@@ -301,33 +298,7 @@ document.write('	<script src="../css/fonts.js"></script>');
 document.write('  </head>');
 
 document.write('  <body> ');
-if (typeof headerv != 'undefined') {
-	if(headerv != "full" && headerv != "partial") {
-		alert('Error E03 - Check the Documentation');
-		document.write('      <nav class="navbar navbar-default navbar-fixed-top" >');
-		document.write('        <div class="container">');
-	} else {
-		if(headerv=="partial") {
-			document.write('    <div class="container" >'); //style="position: fixed;" //It doesnt stick to the top of the page
-			document.write('      <!-- Static navbar -->');
-			xaddcss('.affix-top{width:width: 99.9999%;} .affix{width:57em; margin-top: -21px;}'); //Normal
-			xaddcss('@media (max-width: 1200px){.affix{width:calc(970px - 2em); margin-top: none;}}'); //Middle One
-			xaddcss('@media (max-width: 992px){.affix{width:calc(750px - 2em); margin-top: none;}}'); //Middle Two
-			xaddcss('@media (max-width: 767px){.affix{width:94%; margin-top: none;}}'); //Mobile
-			document.write('      <nav id="unb"  class="navbar navbar-default" data-spy="affix" data-offset-top="1">'); //data-spy="affix" data-offset-top="1"
-			document.write('        <div class="container-fluid" >');
-		}
-		if(headerv=="full") {
-			document.write('      <nav class="navbar navbar-default navbar-fixed-top" >');
-			document.write('        <div class="container">');
-			xaddcss('body{margin-top:2em;');
-		}
-	}
-} else {
-	alert('Error E04 - Check the Documentation');
-	document.write('      <nav class="navbar navbar-default navbar-fixed-top" >');
-	document.write('        <div class="container">');
-}
+
 document.write('          <div class="navbar-header">');
 document.write(' 			<a class="navbar-brand" href="../index.html" class="h1-font">Back to Homepage</a> ');
 document.write('          </div>');
@@ -358,12 +329,6 @@ document.write('    <!-- The above 3 meta tags *must* come first in the head; an
 document.write('     <meta name="description" content="">');
 document.write('    <meta name="author" content="">');
 document.write('    <link rel="icon" href="../../favicon.ico">');
-if (typeof pgtitle != 'undefined') {
-	document.write('<title>' + titlepre + ' - ' + pgtitle +  '</title>');
-} else {
-	alert('Error E02 - Check the Documentation');
-	document.write('<title>' + titlepre + '</title>');
-}
 document.write('    <!-- Bootstrap core CSS -->');
 document.write('    <link href="css/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">');
 document.write('    <!-- Icons & Fonts -->');
