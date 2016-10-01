@@ -1,30 +1,110 @@
+//Variables
 var titlepre = 'LCPC'; //Website Title prefix
 
+//Navbar Dropdown Settings
+dropdown1Name = "Who We Are";
+var dropdown1Names = [
+	"Find Us",
+	"Staff",
+	"Core Values"
+];
+var dropdown1Links = [
+	"findus.html",
+	"staff.html",
+	"corevalues.html"
+];
+
+dropdown2Name = "Worship";
+var dropdown2Names = [
+	"Services",
+	"Sermon Links",
+	"Music",
+	"Seasonal Happenings"
+];
+var dropdown2Links = [
+	"services.html",
+	"sermonlinks.html",
+	"music.html",
+	"seasonalhappenings.html"
+];
+
+dropdown3Name = "Faith Information";
+var dropdown3Names = [
+	"Learning Opportunities",
+	"Children",
+	"Youth",
+	"Adult",
+	"Living in Community"
+];
+var dropdown3Links = [
+	"learningopportunities.html",
+	"children.html",
+	"youth.html",
+	"adult.html",
+	"livingincommunity.html"
+];
+
+dropdown4Name = "What We Do";
+var dropdown4Names = [
+	"Mission",
+	"Peace + Justice",
+	"Tutoring",
+	"Community",
+	"Rummage Sale",
+	"Christmas Gift Giving",
+	"Mission Committee Monthly Initiatives"
+];
+var dropdown4Links = [
+	"mission.html",
+	"peaceandjustice.html",
+	"tutoring.html",
+	"community.html",
+	"rummagesale.html",
+	"christmas.html",
+	"missioncomittee.html"
+];
+
+dropdown5Name = "Contact Us";
+var dropdown5Names = [
+	"CEC",
+	"Map",
+	"E-Blast Sign-Up"
+	"Facility Use"
+];
+var dropdown5Links = [
+	"cec.html",
+	"map.html",
+	"eblast.html"
+	"facility.html"
+];
+
+//Header tags
 document.write('	<head>');
 document.write('		<!--sets characterset to utf8-->');
 document.write('		<meta charset="utf-8">');
 document.write('		<!-- makes microsoft browsers use latest rendering engine-->');
 document.write('		<meta http-equiv="X-UA-Compatible" content="IE=edge">');
 document.write('		<!--title of the webpage-->');
-document.write('		<title>LCPC Home</title>');
+document.write('		<title> ' + titlepre + ' </title>');
 document.write('		<!--Set Characterset to UTF-8 -->');
-document.write('		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">');
+document.write('		<meta http-equiv="Content-Type" content="text/html" charset=utf-8">');
 document.write('		<!--Changes viewport for mobile devices-->');
-document.write('		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">');
-		
+document.write('		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">');	
 document.write('		<!-- Latest compiled and minified CSS -->');
 document.write('		<!-- Bootstrap -->');
 document.write('		<link href="css/bootstrap.min.css" rel="stylesheet">');
-document.write('		<link rel="stylesheet" href="css/stylesheet.css">');
-		
+document.write('		<link rel="stylesheet" href="css/stylesheet.css">');	
 document.write('		<!--[if lt IE 9]>');
 document.write('		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>');
 document.write('		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>');
-document.write('		<![endif]-->');	
+document.write('		<![endif]-->');
+document.write('		<!-- gets the font for the website and imports it -->');
 document.write('		<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic" rel="stylesheet" type="text/css">');
-document.write('  </head>');
-
+document.write('	<!-- Beginning of page -->		');
+document.write('	</head>');
 document.write('	<body>');
+
+//Navbar
 document.write('		<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">');
 document.write('			<div class="container">');
 document.write('				<div class="navbar-header">');
@@ -43,54 +123,79 @@ document.write('				</div>');
 document.write('				<div id="navbar" class="navbar-collapse collapse">');
 document.write('					<ul class="nav navbar-nav">');
 document.write('						<li class="active"><a href="index.html">Home</a></li>');
-document.write('						<li class="dropdown" href="WhoWeAre.html">');
-document.write('							<a role="button" aria-haspopup="true" href="WhoWeAre.html">Who We Are <span class="caret"></span></a>');
-document.write('							<ul class="dropdown-menu">');
-document.write('								<li><a href="FindUs.html">Find Us</a></li>');
-document.write('								<li><a href="CoreValues.html">Core Values</a></li>');
-document.write('							</ul>');
-document.write('						</li>');
-document.write('						<li class="dropdown">');
-document.write('							<a role="button" aria-haspopup="true" href="Worship.html"> Worship <span class="caret"></span></a>');
-document.write('							<ul class="dropdown-menu">');
-document.write('								<li><a href="Services.html">Services</a></li>');
-document.write('								<li><a href="SermonLinks.html">Sermon Links</a></li>');
-document.write('								<li><a href="Music.html">Music</a></li>');
-document.write('								<li><a href="SeasonalHappenings.html">Seasonal Happenings</a></li>');
-document.write('							</ul>');
-document.write('						</li>');
-document.write('						<li class="dropdown">');
-document.write('							<a role="button" aria-haspopup="true" href="FaithFormation.html"> Faith Formation <span class="caret"></span></a>');
-document.write('							<ul class="dropdown-menu">');
-document.write('								<li><a href="LearningOpportunities.html">Learning Opportunities</a></li>');
-document.write('								<li><a href="Children.html">Children</a></li>');
-document.write('								<li><a href="Youth.html">Youth</a></li>');
-document.write('								<li><a href="Adult.html">Adult</a></li>');
-document.write('								<li><a href="LivingInCommunity.html">Living in Community</a></li>');
-document.write('							</ul>');
-document.write('						</li>');
-document.write('						<li class="dropdown">');
-document.write('							<a role="button" aria-haspopup="true" href="WhatWeDo.html"> What We Do <span class="caret"></span></a>');
-document.write('							<ul class="dropdown-menu">');
-document.write('								<li><a href="Mission.html"> Mission </a></li>');
-document.write('								<li><a href="PeaceAndJustice.html">Peace + Justice</a></li>');
-document.write('								<li><a href="Tutoring.html">Tutoring</a></li>');
-document.write('								<li><a href="Community.html">Community</a></li>');
-document.write('								<li><a href="RummageSale.html">Rummage Sale</a></li>');
-document.write('								<li><a href="Christmas.html">Christmas Gift Giving</a></li>');
-document.write('								<li><a href="MissionCommittee.html">Mission Committee Monthly Initiatives</a></li>');
-document.write('							</ul>');
-document.write('						</li>');
-document.write('						<li class="dropdown">');
-document.write('							<a role="button" aria-haspopup="true" href="Contact.html"> Contact <span class="caret"></span></a>');
-document.write('							<ul class="dropdown-menu">');
-document.write('								<li><a href="CEC.html">CEC </a></li>');
-document.write('								<li><a href="Map.html">Map</a></li>');
-document.write('								<li><a href="EBlast.html">E-Blast Sign-Up</a></li>');
-document.write('								<li><a href="Facility.html">Facility Use</a></li>');
-document.write('							</ul>');
-document.write('						</li>');
-document.write('					</ul>');
+
+//Navbar Dropdown Render
+//Dropdown1
+document.write('					<li class="dropdown">');
+document.write('	                    <a role="button" aria-haspopup="true" href="WhoWeAre.html"> ' + dropdown1Name + ' <span class="caret"></span></a>');
+document.write('					<ul class="dropdown-menu">');
+var dropdown1Nameslen = dropdown1Names.length;
+for (var i = 0; i < dropdown1Nameslen; i++) {
+    var ddname = dropdown1Names[i];
+	var ddlink = dropdown1Links[i];
+    document.write('<li><a href="' + ddlink + '">' + ddname + '</a></li>');
+}
+document.write('                   </ul>');
+document.write('                   </li>');
+
+//Dropdown2
+document.write('					<li class="dropdown">');
+document.write('	                    <a role="button" aria-haspopup="true" href="Worship.html"> ' + dropdown2Name + ' <span class="caret"></span></a>');
+document.write('					<ul class="dropdown-menu">');
+var dropdown2Nameslen = dropdown2Names.length;
+for (var i = 0; i < dropdown2Nameslen; i++) {
+    var ddname = dropdown2Names[i];
+	var ddlink = dropdown2Links[i];
+    document.write('<li><a href="' + ddlink + '">' + ddname + '</a></li>');
+}
+document.write('                </ul>');
+document.write('              </li>');
+
+//Dropdown3
+document.write('					<li class="dropdown">');
+document.write('	                    <a role="button" aria-haspopup="true" href="FaithInformation.html"> ' + dropdown3Name + ' <span class="caret"></span></a>');
+document.write('					<ul class="dropdown-menu">');
+var dropdown3Nameslen = dropdown3Names.length;
+for (var i = 0; i < dropdown3Nameslen; i++) {
+    var ddname = dropdown3Names[i];
+	var ddlink = dropdown3Links[i];
+    document.write('<li><a href="' + ddlink + '">' + ddname + '</a></li>');
+}
+document.write('                </ul>');
+document.write('              </li>');
+
+//Dropdown4
+document.write('					<li class="dropdown">');
+document.write('	                    <a role="button" aria-haspopup="true" href="WhatWeDo.html"> ' + dropdown4Name + ' <span class="caret"></span></a>');
+document.write('					<ul class="dropdown-menu">');
+var dropdown4Nameslen = dropdown4Names.length;
+for (var i = 0; i < dropdown4Nameslen; i++) {
+    var ddname = dropdown4Names[i];
+	var ddlink = dropdown4Links[i];
+    document.write('<li><a href="' + ddlink + '">' + ddname + '</a></li>');
+}
+document.write('                </ul>');
+document.write('              </li>');
+
+//Dropdown5
+document.write('					<li class="dropdown">');
+document.write('	                    <a role="button" aria-haspopup="true" href="Contact.html"> ' + dropdown5Name + ' <span class="caret"></span></a>');
+document.write('					<ul class="dropdown-menu">');
+var dropdown5Nameslen = dropdown5Names.length;
+for (var i = 0; i < dropdown5Nameslen; i++) {
+    var ddname = dropdown5Names[i];
+	var ddlink = dropdown5Links[i];
+    document.write('<li><a href="' + ddlink + '">' + ddname + '</a></li>');
+}
+document.write('                </ul>');
+document.write('              </li>');
+
+//Navbar Dropdown Render End Tags
+document.write('                </ul>');
+document.write('              </li>');
+document.write('            </ul>');
+
+//Social Media
 document.write('					<div class="socialmediabig">');
 document.write('						<ul class="nav navbar-nav navbar-right">');
 document.write('							<li><a href="https://www.facebook.com/pages/Lyndhurst-Community-Presbyterian-Church/157862024230469"><img src="Image/icon/facebook.svg" class="socialMedia" > </a></li>');
@@ -98,6 +203,8 @@ document.write('							<li><a href="https://www.twitter.com/GoBoldlyLCPC"><img s
 document.write('							<li><a href="https://www.facebook.com/pages/Lyndhurst-Community-Presbyterian-Church/157862024230469"><img src="Image/icon/instagram.svg" class="socialMedia"></a></li>');
 document.write('						</ul>');
 document.write('					</div>');
+
+//Navbar End Tags
 document.write('				</div>');
 document.write('			</div>');
-document.write('		</nav>');
+document.write('		</nav>'); 
