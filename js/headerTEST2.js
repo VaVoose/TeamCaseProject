@@ -28,7 +28,7 @@ var dropdown2Links = [
 	"seasonalhappenings.html"
 ];
 
-dropdown3Name = "Faith Information";
+dropdown3Name = "Faith Formation";
 var dropdown3Names = [
 	"Learning Opportunities",
 	"Children",
@@ -68,13 +68,13 @@ dropdown5Name = "Contact Us";
 var dropdown5Names = [
 	"CEC",
 	"Map",
-	"E-Blast Sign-Up"
+	"E-Blast Sign-Up",
 	"Facility Use"
 ];
 var dropdown5Links = [
 	"cec.html",
 	"map.html",
-	"eblast.html"
+	"eblast.html",
 	"facility.html"
 ];
 
