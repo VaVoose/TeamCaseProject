@@ -1,7 +1,7 @@
 var titlepre = 'LCPC'; //Website Title prefix
 var color = "#df5a49"; // This is the color of the header and footer
 var bgcolor = "#a1e8d9"; //This is the background color
-
+//This is a test
 var headerv = "partial"; //Header shape, partial or full
 
 var smfacebook = "http://www.facebook.com/pages/Lyndhurst-Community-Presbyterian-Church/157862024230469"; // Social Media - Facebook link
