@@ -81,7 +81,6 @@ var dropdown5Links = [
 //Header tags
 document.write('	<head>');
 document.write('		<!--sets characterset to utf8-->');
-document.write('		<meta charset="utf-8">');
 document.write('		<!-- makes microsoft browsers use latest rendering engine-->');
 document.write('		<meta http-equiv="X-UA-Compatible" content="IE=edge">');
 document.write('		<!--title of the webpage-->');
