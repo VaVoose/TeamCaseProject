@@ -103,6 +103,20 @@ document.write('	<!-- Beginning of page -->		');
 document.write('	</head>');
 document.write('	<body>');
 
+//Image and Title
+document.write('		<div class="jumbotron">');
+document.write('			<div class="container">');
+document.write('				<div class="row">');
+document.write('					<div class="col-xs-12 col-sm-12 col-md-2">');
+document.write('						<a href="index.html"><img src="Image/logotransparent2.gif" id="jumbopic"></a>');
+document.write('					</div>');
+document.write('					<div class="col-xs-12 col-sm-12 col-md-10">');
+document.write('						<p id="jumbo"> Lyndhurst Community Presbyterian Church </p>');
+document.write('					</div>');
+document.write('				</div>');
+document.write('			</div>');
+document.write('		</div>');
+
 //Navbar
 document.write('		<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">');
 document.write('			<div class="container">');
