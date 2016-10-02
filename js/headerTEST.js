@@ -2,18 +2,21 @@
 var titlepre = 'LCPC'; //Website Title prefix
 
 //Navbar Dropdown Settings
+//Dropdown1
 dropdown1Name = "Who We Are";
 var dropdown1Names = [
 	"Find Us",
 	"Staff",
 	"Core Values"
 ];
+dropdown1Link = "whoweare.html";
 var dropdown1Links = [
 	"findus.html",
 	"staff.html",
 	"corevalues.html"
 ];
 
+//Dropdown2
 dropdown2Name = "Worship";
 var dropdown2Names = [
 	"Services",
@@ -21,6 +24,7 @@ var dropdown2Names = [
 	"Music",
 	"Seasonal Happenings"
 ];
+dropdown2Link = "worship.html";
 var dropdown2Links = [
 	"services.html",
 	"sermonlinks.html",
@@ -28,6 +32,7 @@ var dropdown2Links = [
 	"seasonalhappenings.html"
 ];
 
+//Dropdown3
 dropdown3Name = "Faith Formation";
 var dropdown3Names = [
 	"Learning Opportunities",
@@ -36,6 +41,7 @@ var dropdown3Names = [
 	"Adult",
 	"Living in Community"
 ];
+dropdown3Link = "faithformation.html";
 var dropdown3Links = [
 	"learningopportunities.html",
 	"children.html",
@@ -44,6 +50,7 @@ var dropdown3Links = [
 	"livingincommunity.html"
 ];
 
+//Dropdown4
 dropdown4Name = "What We Do";
 var dropdown4Names = [
 	"Mission",
@@ -54,6 +61,7 @@ var dropdown4Names = [
 	"Christmas Gift Giving",
 	"Mission Committee Monthly Initiatives"
 ];
+dropdown4Link = "whatwedo.html";
 var dropdown4Links = [
 	"mission.html",
 	"peaceandjustice.html",
@@ -64,6 +72,7 @@ var dropdown4Links = [
 	"missioncomittee.html"
 ];
 
+//Dropdown5
 dropdown5Name = "Contact Us";
 var dropdown5Names = [
 	"CEC",
@@ -71,6 +80,7 @@ var dropdown5Names = [
 	"E-Blast Sign-Up",
 	"Facility Use"
 ];
+dropdown5Link = "contact.html";
 var dropdown5Links = [
 	"cec.html",
 	"map.html",
@@ -140,6 +150,7 @@ document.write('						<li class="active"><a href="index.html">Home</a></li>');
 
 //TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
 
+//Move to variables section when done testing
 //Creates Variable to detect Media Width
 var mq = window.matchMedia( "(min-width: 1200px)" );
 
@@ -205,7 +216,7 @@ document.write('              </li>');
 
 //Dropdown3
 document.write('					<li class="dropdown">');
-document.write('	                    <a role="button" aria-haspopup="true" href="FaithInformation.html"> ' + dropdown3Name + ' <span class="caret"></span></a>');
+document.write('	                    <a role="button" aria-haspopup="true" href="faithformation.html"> ' + dropdown3Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown3Nameslen = dropdown3Names.length;
 for (var i = 0; i < dropdown3Nameslen; i++) {
