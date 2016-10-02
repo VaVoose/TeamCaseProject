@@ -6,3 +6,4 @@ document.write('		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.
 document.write('		<!-- Include all compiled plugins (below), or include individual files as needed -->'); 
 document.write('		<script src="js/bootstrap.min.js"></script>'); 
 document.write('	</body> '); 
+document.write('</html>'); 

@@ -79,6 +79,7 @@ var dropdown5Links = [
 ];
 
 //Header tags
+document.write('<html lang="en">');
 document.write('	<head>');
 document.write('		<!--sets characterset to utf8-->');
 document.write('		<!-- makes microsoft browsers use latest rendering engine-->');
