@@ -156,6 +156,7 @@ var mq = window.matchMedia( "(min-width: 1200px)" );
 
 //Creates Global Dropdown String
 drpDwn = ' role=\"button\" aria-haspopup=\"true\" ';
+drpDwnChnge = 0;
 console.log(drpDwn);
 
 //Detects Media Query Change
@@ -179,7 +180,6 @@ function WidthChange(mq) {
 	  console.log(drpDwn); //Remove when done testing
 	}
 }
-
 //TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
 
 //Function To Open Dropdown1 Page
@@ -203,7 +203,7 @@ document.write('                   </li>');
 
 //Dropdown2
 document.write('					<li class="dropdown">');
-document.write('	                    <a role="button" aria-haspopup="true" href="Worship.html"> ' + dropdown2Name + ' <span class="caret"></span></a>');
+document.write('	                    <a ' + drpDwn + ' > ' + dropdown2Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown2Nameslen = dropdown2Names.length;
 for (var i = 0; i < dropdown2Nameslen; i++) {
@@ -216,7 +216,7 @@ document.write('              </li>');
 
 //Dropdown3
 document.write('					<li class="dropdown">');
-document.write('	                    <a role="button" aria-haspopup="true" href="faithformation.html"> ' + dropdown3Name + ' <span class="caret"></span></a>');
+document.write('	                    <a ' + drpDwn + ' > ' + dropdown3Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown3Nameslen = dropdown3Names.length;
 for (var i = 0; i < dropdown3Nameslen; i++) {
@@ -229,7 +229,7 @@ document.write('              </li>');
 
 //Dropdown4
 document.write('					<li class="dropdown">');
-document.write('	                    <a role="button" aria-haspopup="true" href="WhatWeDo.html"> ' + dropdown4Name + ' <span class="caret"></span></a>');
+document.write('	                    <a ' + drpDwn + ' > ' + dropdown4Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown4Nameslen = dropdown4Names.length;
 for (var i = 0; i < dropdown4Nameslen; i++) {
@@ -242,7 +242,7 @@ document.write('              </li>');
 
 //Dropdown5
 document.write('					<li class="dropdown">');
-document.write('	                    <a role="button" aria-haspopup="true" href="Contact.html"> ' + dropdown5Name + ' <span class="caret"></span></a>');
+document.write('	                    <a ' + drpDwn + ' > ' + dropdown5Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown5Nameslen = dropdown5Names.length;
 for (var i = 0; i < dropdown5Nameslen; i++) {
