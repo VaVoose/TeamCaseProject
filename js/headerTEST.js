@@ -138,10 +138,48 @@ document.write('				<div id="navbar" class="navbar-collapse collapse">');
 document.write('					<ul class="nav navbar-nav">');
 document.write('						<li class="active"><a href="index.html">Home</a></li>');
 
+//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
+
+//Creates Variable to detect Media Width
+var mq = window.matchMedia( "(min-width: 1200px)" );
+
+//Creates Global Dropdown String
+drpDwn = ' role=\"button\" aria-haspopup=\"true\" ';
+console.log(drpDwn);
+
+//Detects Media Query Change
+if (matchMedia) {
+  var mq = window.matchMedia("(min-width: 1200px)");
+  mq.addListener(WidthChange);
+  WidthChange(mq);
+}
+
+//Notifies Media Query Change
+function WidthChange(mq) {
+	if (mq.matches) {
+	  console.log('window width is at least 1200px'); //Remove when done testing
+	  //Changes Global Dropdown String to Non-Mobile Version
+	  drpDwn = ' role=\"button\" aria-haspopup=\"true\" '; //Remove when done testing
+	  console.log(drpDwn);
+	} else {
+	  console.log('window width is less than 1200px'); //Remove when done testing
+	  //Changes Global Dropdown String to Mobile Version
+	  drpDwn = ' class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" ';
+	  console.log(drpDwn); //Remove when done testing
+	}
+}
+
+//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
+
+//Function To Open Dropdown1 Page
+$(document).on('dblclick', "#dropdown1", function(e){  
+      console.log('test');
+});
+
 //Navbar Dropdown Render
 //Dropdown1
 document.write('					<li class="dropdown">');
-document.write('	                    <a role="button" aria-haspopup="true" href="WhoWeAre.html"> ' + dropdown1Name + ' <span class="caret"></span></a>');
+document.write('	                    <a ' + drpDwn + ' > ' + dropdown1Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown1Nameslen = dropdown1Names.length;
 for (var i = 0; i < dropdown1Nameslen; i++) {
