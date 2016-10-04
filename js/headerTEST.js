@@ -1,5 +1,95 @@
 //Variables
 var titlepre = 'LCPC'; //Website Title prefix
+var mq = window.matchMedia( "(min-width: 1200px)" ); //Creates Variable to detect Media Width
+var drpDwn = ' role=\"button\" aria-haspopup=\"true\" '; //Creates Dropdown String
+
+//If Else Statements
+//Checks If Variable Exists
+if (localStorage.getItem("drpDwnVar") == null) {
+ 	//Detects Page Size and Stores Variable Accordingly
+    if (window.matchMedia( "(min-width: 1200px)" == true)) {
+	    localStorage.setItem("drpDwnVar", 0);
+	    //Sets drpDwnVar to Local Storage
+	    var drpDwnVar = localStorage.getItem("drpDwnVar");
+    } else {
+	    localStorage.setItem("drpDwnVar", 1);
+	    //Sets drpDwnVar to Local Storage
+	    var drpDwnVar = localStorage.getItem("drpDwnVar");
+    }
+//If Variable Exists Then Set It To Local Storage
+} else {
+    //Sets drpDwnVar to Local Storage
+    var drpDwnVar = localStorage.getItem("drpDwnVar");
+}
+
+//Detects Media Query Change
+if (matchMedia) {
+  var mq = window.matchMedia("(min-width: 1200px)");
+  mq.addListener(WidthChange);
+  WidthChange(mq);
+}
+
+//Functions
+//Tests for change and refreshes page
+function TestChange(drpDwnVarChange) {
+	//If Local Variable is Not Equal To Test Variable Then
+	if (drpDwnVarChange != drpDwnVar) {
+		//If Local Variable is Equal To 0 Then
+		if (drpDwnVarChange == 0) {
+			localStorage.setItem("drpDwnVar", 0);
+			drpDwnVar = localStorage.getItem("drpDwnVar");
+			//Reloads Page
+			$("#navbar").load(location.pathname.substring(1)+" #navbar>*","");
+		//If Local Variable is Equal To 1 Then	
+		} else {
+			localStorage.setItem("drpDwnVar", 1);
+			drpDwnVar = localStorage.getItem("drpDwnVar");
+			//Reloads Page
+			$("#navbar").load(location.pathname.substring(1)+" #navbar>*","");
+		}
+	}
+}
+
+//Notifies Media Query Change
+function WidthChange(mq) {
+	if (mq.matches) {
+	  //Changes Global Dropdown String to Non-Mobile Version
+	  drpDwn = ' role=\"button\" aria-haspopup=\"true\" ';
+	  var drpDwnVarChange = 0;
+	  TestChange(drpDwnVarChange);
+	} else {
+	  //Changes Global Dropdown String to Mobile Version
+	  drpDwn = ' class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" ';
+	  var drpDwnVarChange = 1;
+	  TestChange(drpDwnVarChange);
+	}
+}
+
+//ASK TEAM ABOUT THE USE OF DOUBLE CLICK
+//Function To Open Dropdown1 Page
+$(document).on('dblclick', "#dropdown1", function(e){  
+    window.open("E:/LCPC/" + dropdown1Link,"_self");
+});
+
+//Function To Open Dropdown2 Page
+$(document).on('dblclick', "#dropdown2", function(e){
+    window.open("E:/LCPC/" + dropdown2Link,"_self");
+});
+
+//Function To Open Dropdown3 Page
+$(document).on('dblclick', "#dropdown3", function(e){
+	window.open("E:/LCPC/" + dropdown3Link,"_self");
+});
+
+//Function To Open Dropdown4 Page
+$(document).on('dblclick', "#dropdown4", function(e){  
+	window.open("E:/LCPC/" + dropdown4Link,"_self");
+});
+
+//Function To Open Dropdown5 Page
+$(document).on('dblclick', "#dropdown5", function(e){  
+    window.open("E:/LCPC/" + dropdown5Link,"_self");	
+});
 
 //Navbar Dropdown Settings
 //Dropdown1
@@ -129,7 +219,7 @@ document.write('			</div>');
 document.write('		</div>');
 
 //Navbar
-document.write('		<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">');
+document.write('		<nav id="navbar" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">');
 document.write('			<div class="container">');
 document.write('				<div class="navbar-header">');
 document.write('					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">');
@@ -148,49 +238,10 @@ document.write('				<div id="navbar" class="navbar-collapse collapse">');
 document.write('					<ul class="nav navbar-nav">');
 document.write('						<li class="active"><a href="index.html">Home</a></li>');
 
-//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
-
-//Move to variables section when done testing
-//Creates Variable to detect Media Width
-var mq = window.matchMedia( "(min-width: 1200px)" );
-
-//Creates Global Dropdown String
-drpDwn = ' role=\"button\" aria-haspopup=\"true\" ';
-drpDwnChnge = 0;
-console.log(drpDwn);
-
-//Detects Media Query Change
-if (matchMedia) {
-  var mq = window.matchMedia("(min-width: 1200px)");
-  mq.addListener(WidthChange);
-  WidthChange(mq);
-}
-
-//Notifies Media Query Change
-function WidthChange(mq) {
-	if (mq.matches) {
-	  console.log('window width is at least 1200px'); //Remove when done testing
-	  //Changes Global Dropdown String to Non-Mobile Version
-	  drpDwn = ' role=\"button\" aria-haspopup=\"true\" '; //Remove when done testing
-	  console.log(drpDwn);
-	} else {
-	  console.log('window width is less than 1200px'); //Remove when done testing
-	  //Changes Global Dropdown String to Mobile Version
-	  drpDwn = ' class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" ';
-	  console.log(drpDwn); //Remove when done testing
-	}
-}
-//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
-
-//Function To Open Dropdown1 Page
-$(document).on('dblclick', "#dropdown1", function(e){  
-      console.log('test');
-});
-
 //Navbar Dropdown Render
 //Dropdown1
 document.write('					<li class="dropdown">');
-document.write('	                    <a ' + drpDwn + ' > ' + dropdown1Name + ' <span class="caret"></span></a>');
+document.write('	                    <a id="dropdown1" ' + drpDwn + ' > ' + dropdown1Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown1Nameslen = dropdown1Names.length;
 for (var i = 0; i < dropdown1Nameslen; i++) {
@@ -203,7 +254,7 @@ document.write('                   </li>');
 
 //Dropdown2
 document.write('					<li class="dropdown">');
-document.write('	                    <a ' + drpDwn + ' > ' + dropdown2Name + ' <span class="caret"></span></a>');
+document.write('	                    <a id="dropdown2" ' + drpDwn + ' > ' + dropdown2Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown2Nameslen = dropdown2Names.length;
 for (var i = 0; i < dropdown2Nameslen; i++) {
@@ -216,7 +267,7 @@ document.write('              </li>');
 
 //Dropdown3
 document.write('					<li class="dropdown">');
-document.write('	                    <a ' + drpDwn + ' > ' + dropdown3Name + ' <span class="caret"></span></a>');
+document.write('	                    <a id="dropdown3" ' + drpDwn + ' > ' + dropdown3Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown3Nameslen = dropdown3Names.length;
 for (var i = 0; i < dropdown3Nameslen; i++) {
@@ -229,7 +280,7 @@ document.write('              </li>');
 
 //Dropdown4
 document.write('					<li class="dropdown">');
-document.write('	                    <a ' + drpDwn + ' > ' + dropdown4Name + ' <span class="caret"></span></a>');
+document.write('	                    <a id="dropdown4" ' + drpDwn + ' > ' + dropdown4Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown4Nameslen = dropdown4Names.length;
 for (var i = 0; i < dropdown4Nameslen; i++) {
@@ -242,7 +293,7 @@ document.write('              </li>');
 
 //Dropdown5
 document.write('					<li class="dropdown">');
-document.write('	                    <a ' + drpDwn + ' > ' + dropdown5Name + ' <span class="caret"></span></a>');
+document.write('	                    <a id="dropdown5" ' + drpDwn + ' > ' + dropdown5Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown5Nameslen = dropdown5Names.length;
 for (var i = 0; i < dropdown5Nameslen; i++) {
