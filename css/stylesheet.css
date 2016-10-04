@@ -330,6 +330,10 @@ nav.navbar {
 	}
 }
 
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+	max-height: 500px !important;
+}
+
 
 
 /* Code for the picture animations */
