@@ -9,11 +9,11 @@ var dropdown1Names = [
 	"Staff",
 	"Core Values"
 ];
-dropdown1Link = "whoweare.html";
+dropdown1Link = "WhoWeAre.html";
 var dropdown1Links = [
-	"findus.html",
-	"staff.html",
-	"corevalues.html"
+	"FindUs.html",
+	"Staff.html",
+	"CoreValues.html"
 ];
 
 //Dropdown2
@@ -24,12 +24,12 @@ var dropdown2Names = [
 	"Music",
 	"Seasonal Happenings"
 ];
-dropdown2Link = "worship.html";
+dropdown2Link = "Worship.html";
 var dropdown2Links = [
-	"services.html",
-	"sermonlinks.html",
-	"music.html",
-	"seasonalhappenings.html"
+	"Services.html",
+	"SermonLinks.html",
+	"Music.html",
+	"SeasonalHappenings.html"
 ];
 
 //Dropdown3
@@ -41,13 +41,13 @@ var dropdown3Names = [
 	"Adult",
 	"Living in Community"
 ];
-dropdown3Link = "faithformation.html";
+dropdown3Link = "FaithFormation.html";
 var dropdown3Links = [
-	"learningopportunities.html",
-	"children.html",
-	"youth.html",
-	"adult.html",
-	"livingincommunity.html"
+	"LearningOpportunities.html",
+	"Children.html",
+	"Youth.html",
+	"Adult.html",
+	"LivingInCommunity.html"
 ];
 
 //Dropdown4
@@ -61,15 +61,15 @@ var dropdown4Names = [
 	"Christmas Gift Giving",
 	"Mission Committee Monthly Initiatives"
 ];
-dropdown4Link = "whatwedo.html";
+dropdown4Link = "WhatWeDo.html";
 var dropdown4Links = [
-	"mission.html",
-	"peaceandjustice.html",
-	"tutoring.html",
-	"community.html",
-	"rummagesale.html",
+	"Mission.html",
+	"PeaceAndJustice.html",
+	"Tutoring.html",
+	"Community.html",
+	"RummageSale.html",
 	"christmas.html",
-	"missioncomittee.html"
+	"MissionComittee.html"
 ];
 
 //Dropdown5
@@ -80,12 +80,12 @@ var dropdown5Names = [
 	"E-Blast Sign-Up",
 	"Facility Use"
 ];
-dropdown5Link = "contact.html";
+dropdown5Link = "Contact.html";
 var dropdown5Links = [
-	"cec.html",
-	"map.html",
-	"eblast.html",
-	"facility.html"
+	"CEC.html",
+	"Map.html",
+	"EBlast.html",
+	"Facility.html"
 ];
 
 //Header tags
