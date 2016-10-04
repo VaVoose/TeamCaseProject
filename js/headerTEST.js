@@ -150,14 +150,44 @@ document.write('						<li class="active"><a href="index.html">Home</a></li>');
 
 //TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
 
+//Creates Local Storage
+if (localStorage.getItem("drpDwnVar") == null) {
+	    localStorage.setItem("drpDwnVar", 0);
+	   	var drpDwnVar = localStorage.getItem("drpDwnVar");
+    	console.log(drpDwnVar);
+    	console.log("if");
+} else if (window.matchMedia( "(min-width: 1200px)" ) == true) {
+		localStorage.setItem("drpDwnVar", 0);
+	   	var drpDwnVar = localStorage.getItem("drpDwnVar");
+		console.log(drpDwnVar);
+		console.log("else if");
+} else {
+		localStorage.setItem("drpDwnVar", 1);
+	   	var drpDwnVar = localStorage.getItem("drpDwnVar");
+		console.log(drpDwnVar);
+		console.log("else");
+}
+
+function TestVars(drpDwnVarTest) {
+	if (drpDwnVarTest != drpDwnVar) {
+		console.log("not equal");
+		drpDwnVar = drpDwnVarTest;
+		console.log(drpDwnVar);
+	} else {
+		console.log("equal");
+	}
+}
+console.log(drpDwnVar);
+//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
+
+//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
+
 //Move to variables section when done testing
 //Creates Variable to detect Media Width
 var mq = window.matchMedia( "(min-width: 1200px)" );
 
 //Creates Global Dropdown String
 drpDwn = ' role=\"button\" aria-haspopup=\"true\" ';
-drpDwnChnge = 0;
-console.log(drpDwn);
 
 //Detects Media Query Change
 if (matchMedia) {
@@ -169,15 +199,17 @@ if (matchMedia) {
 //Notifies Media Query Change
 function WidthChange(mq) {
 	if (mq.matches) {
-	  console.log('window width is at least 1200px'); //Remove when done testing
 	  //Changes Global Dropdown String to Non-Mobile Version
-	  drpDwn = ' role=\"button\" aria-haspopup=\"true\" '; //Remove when done testing
-	  console.log(drpDwn);
+	  drpDwn = ' role=\"button\" aria-haspopup=\"true\" ';
+	  drpDwnVarTest = 0;
+	  TestVars(drpDwnVarTest);
+	  console.log(drpDwnVarTest);
 	} else {
-	  console.log('window width is less than 1200px'); //Remove when done testing
 	  //Changes Global Dropdown String to Mobile Version
 	  drpDwn = ' class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" ';
-	  console.log(drpDwn); //Remove when done testing
+	  drpDwnVarTest = 1;
+	  TestVars(drpDwnVarTest);
+	  console.log(drpDwnVarTest);
 	}
 }
 //TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
