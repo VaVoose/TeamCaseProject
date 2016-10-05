@@ -39,13 +39,13 @@ function TestChange(drpDwnVarChange) {
 			localStorage.setItem("drpDwnVar", 0);
 			drpDwnVar = localStorage.getItem("drpDwnVar");
 			//Reloads Page
-			$("#navbar").load(location.pathname.substring(1)+" #navbar>*","");
+			location.reload();
 		//If Local Variable is Equal To 1 Then	
 		} else {
 			localStorage.setItem("drpDwnVar", 1);
 			drpDwnVar = localStorage.getItem("drpDwnVar");
 			//Reloads Page
-			$("#navbar").load(location.pathname.substring(1)+" #navbar>*","");
+			location.reload();
 		}
 	}
 }
@@ -219,7 +219,7 @@ document.write('			</div>');
 document.write('		</div>');
 
 //Navbar
-document.write('		<nav id="navbar" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">');
+document.write('		<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">');
 document.write('			<div class="container">');
 document.write('				<div class="navbar-header">');
 document.write('					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">');
