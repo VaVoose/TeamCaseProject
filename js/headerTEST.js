@@ -219,7 +219,7 @@ document.write('			</div>');
 document.write('		</div>');
 
 //Navbar
-document.write('		<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">');
+document.write('		<nav id="nabarMain" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">');
 document.write('			<div class="container">');
 document.write('				<div class="navbar-header">');
 document.write('					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">');
