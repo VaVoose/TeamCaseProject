@@ -1,5 +1,95 @@
 //Variables
 var titlepre = 'LCPC'; //Website Title prefix
+var mq = window.matchMedia( "(min-width: 1200px)" ); //Creates Variable to detect Media Width
+var drpDwn = ' role=\"button\" aria-haspopup=\"true\" '; //Creates Dropdown String
+
+//If Else Statements
+//Checks If Variable Exists
+if (localStorage.getItem("drpDwnVar") == null) {
+ 	//Detects Page Size and Stores Variable Accordingly
+    if (window.matchMedia( "(min-width: 1200px)" == true)) {
+	    localStorage.setItem("drpDwnVar", 0);
+	    //Sets drpDwnVar to Local Storage
+	    var drpDwnVar = localStorage.getItem("drpDwnVar");
+    } else {
+	    localStorage.setItem("drpDwnVar", 1);
+	    //Sets drpDwnVar to Local Storage
+	    var drpDwnVar = localStorage.getItem("drpDwnVar");
+    }
+//If Variable Exists Then Set It To Local Storage
+} else {
+    //Sets drpDwnVar to Local Storage
+    var drpDwnVar = localStorage.getItem("drpDwnVar");
+}
+
+//Detects Media Query Change
+if (matchMedia) {
+  var mq = window.matchMedia("(min-width: 1200px)");
+  mq.addListener(WidthChange);
+  WidthChange(mq);
+}
+
+//Functions
+//Tests for change and refreshes page
+function TestChange(drpDwnVarChange) {
+	//If Local Variable is Not Equal To Test Variable Then
+	if (drpDwnVarChange != drpDwnVar) {
+		//If Local Variable is Equal To 0 Then
+		if (drpDwnVarChange == 0) {
+			localStorage.setItem("drpDwnVar", 0);
+			drpDwnVar = localStorage.getItem("drpDwnVar");
+			//Reloads Page
+			location.reload();
+		//If Local Variable is Equal To 1 Then	
+		} else {
+			localStorage.setItem("drpDwnVar", 1);
+			drpDwnVar = localStorage.getItem("drpDwnVar");
+			//Reloads Page
+			location.reload();
+		}
+	}
+}
+
+//Notifies Media Query Change
+function WidthChange(mq) {
+	if (mq.matches) {
+	  //Changes Global Dropdown String to Non-Mobile Version
+	  drpDwn = ' role=\"button\" aria-haspopup=\"true\" ';
+	  var drpDwnVarChange = 0;
+	  TestChange(drpDwnVarChange);
+	} else {
+	  //Changes Global Dropdown String to Mobile Version
+	  drpDwn = ' class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" ';
+	  var drpDwnVarChange = 1;
+	  TestChange(drpDwnVarChange);
+	}
+}
+
+//ASK TEAM ABOUT THE USE OF DOUBLE CLICK
+//Function To Open Dropdown1 Page
+$(document).on('dblclick', "#dropdown1", function(e){  
+    window.open(dropdown1Link,"_self");
+});
+
+//Function To Open Dropdown2 Page
+$(document).on('dblclick', "#dropdown2", function(e){
+    window.open(dropdown2Link,"_self");
+});
+
+//Function To Open Dropdown3 Page
+$(document).on('dblclick', "#dropdown3", function(e){
+	window.open(dropdown3Link,"_self");
+});
+
+//Function To Open Dropdown4 Page
+$(document).on('dblclick', "#dropdown4", function(e){  
+	window.open(dropdown4Link,"_self");
+});
+
+//Function To Open Dropdown5 Page
+$(document).on('dblclick', "#dropdown5", function(e){  
+    window.open(dropdown5Link,"_self");	
+});
 
 //Navbar Dropdown Settings
 //Dropdown1
@@ -9,11 +99,11 @@ var dropdown1Names = [
 	"Staff",
 	"Core Values"
 ];
-dropdown1Link = "whoweare.html";
+dropdown1Link = "WhoWeAre.html";
 var dropdown1Links = [
-	"findus.html",
-	"staff.html",
-	"corevalues.html"
+	"FindUs.html",
+	"Staff.html",
+	"CoreValues.html"
 ];
 
 //Dropdown2
@@ -24,12 +114,12 @@ var dropdown2Names = [
 	"Music",
 	"Seasonal Happenings"
 ];
-dropdown2Link = "worship.html";
+dropdown2Link = "Worship.html";
 var dropdown2Links = [
-	"services.html",
-	"sermonlinks.html",
-	"music.html",
-	"seasonalhappenings.html"
+	"Services.html",
+	"SermonLinks.html",
+	"Music.html",
+	"SeasonalHappenings.html"
 ];
 
 //Dropdown3
@@ -41,13 +131,13 @@ var dropdown3Names = [
 	"Adult",
 	"Living in Community"
 ];
-dropdown3Link = "faithformation.html";
+dropdown3Link = "FaithFormation.html";
 var dropdown3Links = [
-	"learningopportunities.html",
-	"children.html",
-	"youth.html",
-	"adult.html",
-	"livingincommunity.html"
+	"LearningOpportunities.html",
+	"Children.html",
+	"Youth.html",
+	"Adult.html",
+	"LivingInCommunity.html"
 ];
 
 //Dropdown4
@@ -61,15 +151,15 @@ var dropdown4Names = [
 	"Christmas Gift Giving",
 	"Mission Committee Monthly Initiatives"
 ];
-dropdown4Link = "whatwedo.html";
+dropdown4Link = "WhatWeDo.html";
 var dropdown4Links = [
-	"mission.html",
-	"peaceandjustice.html",
-	"tutoring.html",
-	"community.html",
-	"rummagesale.html",
+	"Mission.html",
+	"PeaceAndJustice.html",
+	"Tutoring.html",
+	"Community.html",
+	"RummageSale.html",
 	"christmas.html",
-	"missioncomittee.html"
+	"MissionComittee.html"
 ];
 
 //Dropdown5
@@ -80,12 +170,12 @@ var dropdown5Names = [
 	"E-Blast Sign-Up",
 	"Facility Use"
 ];
-dropdown5Link = "contact.html";
+dropdown5Link = "Contact.html";
 var dropdown5Links = [
-	"cec.html",
-	"map.html",
-	"eblast.html",
-	"facility.html"
+	"CEC.html",
+	"Map.html",
+	"EBlast.html",
+	"Facility.html"
 ];
 
 //Header tags
@@ -129,7 +219,7 @@ document.write('			</div>');
 document.write('		</div>');
 
 //Navbar
-document.write('		<nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">');
+document.write('		<nav id="nabarMain" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="100">');
 document.write('			<div class="container">');
 document.write('				<div class="navbar-header">');
 document.write('					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">');
@@ -148,81 +238,10 @@ document.write('				<div id="navbar" class="navbar-collapse collapse">');
 document.write('					<ul class="nav navbar-nav">');
 document.write('						<li class="active"><a href="index.html">Home</a></li>');
 
-//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
-
-//Creates Local Storage
-if (localStorage.getItem("drpDwnVar") == null) {
-	    localStorage.setItem("drpDwnVar", 0);
-	   	var drpDwnVar = localStorage.getItem("drpDwnVar");
-    	console.log(drpDwnVar);
-    	console.log("if");
-} else if (window.matchMedia( "(min-width: 1200px)" ) == true) {
-		localStorage.setItem("drpDwnVar", 0);
-	   	var drpDwnVar = localStorage.getItem("drpDwnVar");
-		console.log(drpDwnVar);
-		console.log("else if");
-} else {
-		localStorage.setItem("drpDwnVar", 1);
-	   	var drpDwnVar = localStorage.getItem("drpDwnVar");
-		console.log(drpDwnVar);
-		console.log("else");
-}
-
-function TestVars(drpDwnVarTest) {
-	if (drpDwnVarTest != drpDwnVar) {
-		console.log("not equal");
-		drpDwnVar = drpDwnVarTest;
-		console.log(drpDwnVar);
-	} else {
-		console.log("equal");
-	}
-}
-console.log(drpDwnVar);
-//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
-
-//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
-
-//Move to variables section when done testing
-//Creates Variable to detect Media Width
-var mq = window.matchMedia( "(min-width: 1200px)" );
-
-//Creates Global Dropdown String
-drpDwn = ' role=\"button\" aria-haspopup=\"true\" ';
-
-//Detects Media Query Change
-if (matchMedia) {
-  var mq = window.matchMedia("(min-width: 1200px)");
-  mq.addListener(WidthChange);
-  WidthChange(mq);
-}
-
-//Notifies Media Query Change
-function WidthChange(mq) {
-	if (mq.matches) {
-	  //Changes Global Dropdown String to Non-Mobile Version
-	  drpDwn = ' role=\"button\" aria-haspopup=\"true\" ';
-	  drpDwnVarTest = 0;
-	  TestVars(drpDwnVarTest);
-	  console.log(drpDwnVarTest);
-	} else {
-	  //Changes Global Dropdown String to Mobile Version
-	  drpDwn = ' class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" ';
-	  drpDwnVarTest = 1;
-	  TestVars(drpDwnVarTest);
-	  console.log(drpDwnVarTest);
-	}
-}
-//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST//TEST
-
-//Function To Open Dropdown1 Page
-$(document).on('dblclick', "#dropdown1", function(e){  
-      console.log('test');
-});
-
 //Navbar Dropdown Render
 //Dropdown1
 document.write('					<li class="dropdown">');
-document.write('	                    <a ' + drpDwn + ' > ' + dropdown1Name + ' <span class="caret"></span></a>');
+document.write('	                    <a id="dropdown1" ' + drpDwn + ' > ' + dropdown1Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown1Nameslen = dropdown1Names.length;
 for (var i = 0; i < dropdown1Nameslen; i++) {
@@ -235,7 +254,7 @@ document.write('                   </li>');
 
 //Dropdown2
 document.write('					<li class="dropdown">');
-document.write('	                    <a ' + drpDwn + ' > ' + dropdown2Name + ' <span class="caret"></span></a>');
+document.write('	                    <a id="dropdown2" ' + drpDwn + ' > ' + dropdown2Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown2Nameslen = dropdown2Names.length;
 for (var i = 0; i < dropdown2Nameslen; i++) {
@@ -248,7 +267,7 @@ document.write('              </li>');
 
 //Dropdown3
 document.write('					<li class="dropdown">');
-document.write('	                    <a ' + drpDwn + ' > ' + dropdown3Name + ' <span class="caret"></span></a>');
+document.write('	                    <a id="dropdown3" ' + drpDwn + ' > ' + dropdown3Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown3Nameslen = dropdown3Names.length;
 for (var i = 0; i < dropdown3Nameslen; i++) {
@@ -261,7 +280,7 @@ document.write('              </li>');
 
 //Dropdown4
 document.write('					<li class="dropdown">');
-document.write('	                    <a ' + drpDwn + ' > ' + dropdown4Name + ' <span class="caret"></span></a>');
+document.write('	                    <a id="dropdown4" ' + drpDwn + ' > ' + dropdown4Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown4Nameslen = dropdown4Names.length;
 for (var i = 0; i < dropdown4Nameslen; i++) {
@@ -274,7 +293,7 @@ document.write('              </li>');
 
 //Dropdown5
 document.write('					<li class="dropdown">');
-document.write('	                    <a ' + drpDwn + ' > ' + dropdown5Name + ' <span class="caret"></span></a>');
+document.write('	                    <a id="dropdown5" ' + drpDwn + ' > ' + dropdown5Name + ' <span class="caret"></span></a>');
 document.write('					<ul class="dropdown-menu">');
 var dropdown5Nameslen = dropdown5Names.length;
 for (var i = 0; i < dropdown5Nameslen; i++) {
