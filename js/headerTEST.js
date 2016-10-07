@@ -68,27 +68,27 @@ function WidthChange(mq) {
 //ASK TEAM ABOUT THE USE OF DOUBLE CLICK
 //Function To Open Dropdown1 Page
 $(document).on('dblclick', "#dropdown1", function(e){  
-    window.open("E:/LCPC/" + dropdown1Link,"_self");
+    window.open(dropdown1Link,"_self");
 });
 
 //Function To Open Dropdown2 Page
 $(document).on('dblclick', "#dropdown2", function(e){
-    window.open("E:/LCPC/" + dropdown2Link,"_self");
+    window.open(dropdown2Link,"_self");
 });
 
 //Function To Open Dropdown3 Page
 $(document).on('dblclick', "#dropdown3", function(e){
-	window.open("E:/LCPC/" + dropdown3Link,"_self");
+	window.open(dropdown3Link,"_self");
 });
 
 //Function To Open Dropdown4 Page
 $(document).on('dblclick', "#dropdown4", function(e){  
-	window.open("E:/LCPC/" + dropdown4Link,"_self");
+	window.open(dropdown4Link,"_self");
 });
 
 //Function To Open Dropdown5 Page
 $(document).on('dblclick', "#dropdown5", function(e){  
-    window.open("E:/LCPC/" + dropdown5Link,"_self");	
+    window.open(dropdown5Link,"_self");	
 });
 
 //Navbar Dropdown Settings
