@@ -154,8 +154,8 @@ div.missionstatement {
 	padding-bottom: 20px;
 }
 
-div.input {
-	padding-bottom: 10px;
+div.input{
+	padding-bottom: 5px;
 }
 
 div.calendarholder {
@@ -321,6 +321,17 @@ nav.navbar {
 	height: 230px;
 	width: 200px;
 	margin-top: -25px;
+}
+
+#inputs {
+	font-size: 15px;
+	color: #000000;
+	padding-top: 0px !important;
+	background-color: #FFFFFF !important;
+}
+
+#mceu_28 {
+	padding-bottom: 60px;
 }
 
 .bottom {

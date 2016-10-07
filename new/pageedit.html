@@ -1,0 +1,56 @@
+
+ <HEAD>
+<style>body{overflow:hidden;margin-left:0px;margin-right:0px;margin-top:0px;}#editbox{height:75%}input{margin-right:5%;}#inputs{margin-top:0.5em;}</style>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="http://cdn.tinymce.com/4/tinymce.min.js"></script>
+<link href="http://lcpc.exploit.ws/TeamCaseProject/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/stylesheet.css">
+<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="stylesheet.css">
+<script>tinymce.init({ 
+			selector:'textarea', 
+			plugins:'image imagetools autolink lists link media table contextmenu paste textcolor colorpicker textpattern wordcount',
+			font_formats: 'Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;Josefin Slab=Josefin Slab, monospace',
+			toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect fontselect fontsizeselect forecolor backcolor",
+			style_formats: [
+				{ title: 'Green Header', block: 'h1', styles: { color: '#339933' } },
+				{ title: 'Bold text', inline: 'strong' },
+				{ title: 'Red text', inline: 'span', styles: { color: '#ff0000' } },
+				{ title: 'Badge', inline: 'span', styles: { display: 'inline-block', border: '1px solid #2276d2', 'border-radius': '5px', padding: '2px 5px', margin: '0 2px', color: '#2276d2' } },
+				{ title: 'Table row 1', selector: 'tr', classes: 'tablerow1' }
+  ],
+			content_css: [
+				'http://lcpc.exploit.ws/TeamCaseProject/css/stylesheet.css',
+				'http://lcpc.exploit.ws/TeamCaseProject/css/bootstrap.min.css',
+				'https://fonts.googleapis.com/css?family=Josefin+Slab:400,400italic'
+			]
+			
+			});</script>
+</HEAD>
+<BODY>
+<form method="POST" id="editform">
+<center>
+ 
+<textarea id="editbox" name="content" form="editform"><p style="text-align: center;"><strong>Hello World!</strong></p>
+<p style="text-align: left;"><img src="../TeamCaseProject/Image/nodding_pepe.gif" alt="peepee the frog" width="304" height="301"/></p>
+<p style="text-align: left;">meem2</p>
+<p style="text-align: left;">test text</p>
+<p style="text-align: left;">lolz</p>
+<p style="text-align: left;">test text</p>
+<p style="text-align: left;">test text</p>
+<p style="text-align: left;">test text</p>
+<p style="text-align: left;">test text</p>
+<p style="text-align: left;">test text</p>
+<p style="text-align: left;">test text</p>
+<p style="text-align: left;">test text</p>
+<p style="text-align: left;">test text</p>
+<p style="text-align: left;">test text</p></textarea>
+<div id="inputs" class="footer"> 
+	
+		Page Title: <input name="name" value="test page"> 
+		Page Catagory: <input name="catagory" value="top"> 
+		<input type="submit" name="submit" value="Save Page">
+	
+</div>
+</form>
